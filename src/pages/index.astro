@@ -1,0 +1,104 @@
+---
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#edf1f0" />
+  <meta name="description" content="Interactive portfolio wireframe with small playable games and motion design." />
+  <title>PLAYGROUND — Interactive Portfolio Wireframe</title>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top" aria-label="回到顶部">PLAY<span>GROUND</span><span class="wordmark-dot">.</span></a>
+      <nav aria-label="主导航" class="main-nav">
+        <a href="#about">ABOUT</a><a href="#work">WORK</a><a href="#lab">LAB</a><a href="#contact">CONTACT</a>
+      </nav>
+      <div class="header-right">
+        <div class="xp-block" aria-label="访客经验值">
+          <div class="xp-line"><strong id="xp-level">LV 01</strong><span id="xp-speed">+1 XP/s</span></div>
+          <div class="xp-track"><span id="xp-progress"></span></div>
+        </div>
+        <button class="sound-button" id="theme-button" type="button" aria-label="切换主题色">◐ <span>THEME</span></button>
+      </div>
+    </header>
+
+    <section class="pong-hero theme-surface" aria-label="可玩的乒乓球游戏">
+      <div class="game-head"><span>01 / INTERACTIVE PLAYGROUND</span><span class="status-dot">● LIVE CANVAS</span></div>
+      <div class="game-screen pong-screen" id="pong-stage">
+        <canvas id="pong-canvas" aria-label="Pong 球类游戏，按 W、S 键控制左侧挡板"></canvas>
+        <div class="game-overlay" id="pong-overlay">
+          <span class="tiny-label">LET'S PLAY SOMETHING</span>
+          <h2>BREAK THE<br />BORING.</h2>
+          <p>你的作品集，不该只是静态展示。</p>
+          <button id="pong-start" class="pill-button" type="button">START GAME <span>↗</span></button>
+          <span class="hint">W / S TO MOVE · TAP TO PAUSE</span>
+        </div>
+        <div class="game-counter"><span>PLAYER <b id="pong-score">00</b></span><span>CPU <b id="cpu-score">00</b></span></div>
+      </div>
+      <div class="game-bottom"><span>SCROLL TO EXPLORE ↓</span><span>BUILT FOR CURIOSITY, NOT CONVERSION</span></div>
+    </section>
+
+    <main>
+      <section class="intro-section section-wrap theme-surface" id="about">
+        <div class="section-kicker reveal">02 / THE INTRODUCTION <span>—</span> HELLO WORLD</div>
+        <div class="intro-grid">
+          <div class="intro-lead reveal">
+            <span class="eyebrow">A LITTLE ABOUT ME</span>
+            <h1>IDEAS.<br /><span class="outlined">SYSTEMS.</span><br />PLAY.</h1>
+            <div class="tag-row"><span>GAMEPLAY</span><span>ENGINEERING</span><span>CREATIVE TECH</span></div>
+          </div>
+          <div class="intro-copy reveal">
+            <div class="placeholder-portrait" aria-label="头像占位模块"><div class="portrait-orbit"></div><span>YOUR<br />AVATAR<br />HERE ↗</span></div>
+            <p>你好，我是 <strong>[ YOUR NAME ]</strong>。我用代码构建可交互的体验，相信最好的产品能让人忍不住再试一次。</p>
+            <p class="muted">这是一套可替换文案、项目与视觉资源的 Landing Page 白模。所有演示模块都能运行。</p>
+            <a href="#work" class="text-link">EXPLORE MY WORK <span>↗</span></a>
+          </div>
+        </div>
+        <div class="stats-row reveal">
+          <div><strong>08<span>+</span></strong><small>PROJECTS BUILT</small></div>
+          <div><strong>04<span>+</span></strong><small>YEARS BUILDING</small></div>
+          <div><strong>∞</strong><small>IDEAS IN PROGRESS</small></div>
+          <div class="stat-message">DESIGN WITH INTENT.<br />BUILD WITH CURIOSITY.</div>
+        </div>
+      </section>
+
+      <section class="work-section section-wrap" id="work">
+        <div class="section-kicker reveal">03 / SELECTED WORK <span>—</span> CASE STUDIES</div>
+        <div class="section-heading reveal"><h2>THINGS I'VE<br />BEEN <em>MAKING.</em></h2><p>项目数据占位。卡片布局、交互及滚动动画已经实现。</p></div>
+        <div class="project-grid">
+          <a class="project-card project-large reveal" href="#contact"><div class="project-art art-a"><span class="mock-window"><i></i><i></i><i></i></span><b>01</b><div class="shape shape-a"></div><div class="shape shape-b"></div></div><div class="project-meta"><div><small>CASE STUDY / 2026</small><h3>PROJECT ALPHA</h3><p>Interactive systems & gameplay</p></div><span class="circle-arrow">↗</span></div></a>
+          <a class="project-card reveal" href="#contact"><div class="project-art art-b"><b>02</b><div class="pixel-grid">◧ ◩ ◨<br/>◩ ◧ ◩<br/>◨ ◩ ◧</div></div><div class="project-meta"><div><small>EXPERIMENT / 2026</small><h3>PROJECT BETA</h3><p>Creative tools & interfaces</p></div><span class="circle-arrow">↗</span></div></a>
+          <a class="project-card reveal" href="#contact"><div class="project-art art-c"><b>03</b><div class="big-ring"></div><span class="art-caption">INTERACTIVE<br/>PROTOTYPE</span></div><div class="project-meta"><div><small>PLAYGROUND / 2025</small><h3>PROJECT GAMMA</h3><p>Experiments in motion</p></div><span class="circle-arrow">↗</span></div></a>
+        </div>
+      </section>
+
+      <section class="experience-section section-wrap theme-surface" id="experience">
+        <div class="section-kicker reveal">04 / EXPERIENCE <span>—</span> THE JOURNEY</div>
+        <div class="section-heading reveal"><h2>A FEW<br /><em>CHAPTERS.</em></h2><p>点击卡片展开，体验响应式 Flex 布局动画。</p></div>
+        <div class="experience-list reveal" role="group" aria-label="经历卡片">
+          <button class="experience-item active" type="button" aria-expanded="true"><span class="exp-number">01</span><span class="exp-company">BUILD</span><span class="exp-detail">从想法到可玩的原型，快速试错、迭代与交付。<br /><small>GAMEPLAY / RUNTIME / SYSTEMS</small></span><span class="exp-plus">−</span></button>
+          <button class="experience-item" type="button" aria-expanded="false"><span class="exp-number">02</span><span class="exp-company">DESIGN</span><span class="exp-detail">把复杂交互做得清晰、有趣且易于理解。<br /><small>UI / UX / MOTION</small></span><span class="exp-plus">+</span></button>
+          <button class="experience-item" type="button" aria-expanded="false"><span class="exp-number">03</span><span class="exp-company">EXPLORE</span><span class="exp-detail">用创意编程探索新的互动表达方式。<br /><small>TOOLS / WEB / CREATIVE CODE</small></span><span class="exp-plus">+</span></button>
+        </div>
+      </section>
+
+      <section class="lab-section section-wrap theme-surface" id="lab">
+        <div class="section-kicker reveal">05 / THE LAB <span>—</span> BREAK THINGS TO LEARN</div>
+        <div class="section-heading reveal"><h2>SKILLS YOU<br />CAN <em>PLAY.</em></h2><p>技能即砖块。A / D 移动挡板，击中砖块获得分数。</p></div>
+        <div class="lab-grid">
+          <div class="skills-cloud reveal"><span>TOOLBOX / PLACEHOLDERS</span><div class="skill-tags"><span>Unity</span><span>C#</span><span>TypeScript</span><span>Web</span><span>Gameplay</span><span>UI / UX</span><span>Tools</span><span>Architecture</span><span>Animation</span><span>Creative Code</span></div><div class="lab-note"><span>↳</span> The best way to explain an interaction is to make it playable.</div></div>
+          <div class="brick-shell reveal"><div class="brick-top"><span>BRICK BREAKER / 001</span><span id="brick-score">SCORE 000</span></div><div class="brick-area" id="brick-stage"><canvas id="brick-canvas" aria-label="打砖块游戏，按 A、D 键移动挡板"></canvas><div class="brick-overlay" id="brick-overlay"><span>MINI GAME</span><strong>READY?</strong><button id="brick-start" class="pill-button" type="button">START BREAKING ↗</button><small>A / D TO MOVE</small></div></div><div class="brick-bottom">PLAY. LEARN. REPEAT. <span id="brick-level">LEVEL 01</span></div></div>
+        </div>
+      </section>
+
+      <section class="contact-section section-wrap" id="contact"><div class="section-kicker reveal">06 / WHAT'S NEXT <span>—</span> LET'S CONNECT</div><div class="contact-inner reveal"><div><span class="eyebrow">HAVE SOMETHING INTERESTING?</span><h2>LET'S MAKE<br /><em>IT REAL.</em></h2></div><a href="mailto:hello@example.com" class="contact-link" aria-label="替换成自己的联系方式">SAY HELLO ↗</a></div></section>
+    </main>
+    <footer><span>© 2026 PLAYGROUND / WIREFRAME V1</span><a href="#top">BACK TO TOP ↑</a><span>NO LIBRARIES WERE HARMED IN THESE ANIMATIONS.</span></footer>
+  </div>
+  <script src="../scripts/site.ts"></script>
+</body>
+</html>
