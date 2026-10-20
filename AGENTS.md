@@ -23,10 +23,10 @@
 
 ## Status / constraints
 - The prototype is committed to the feature branch; main only contains the initialization README.
-- The prototype has **NOT** passed a real npm build, typecheck or browser test. Do not imply it is production-ready.
+- The original feature branch was unvalidated. The `fix/interactive-validation` branch passes a real npm build, typecheck and 9 Chromium browser tests; see `docs/VALIDATION_REPORT.md`. Cloud deployment is still pending server details and credentials.
 - All biographical text, projects, dates, stats, email address, and branding are placeholders.
 - Do not merge into main until build, mobile checks, keyboard/touch gameplay and interaction smoke tests pass.
-- The existing games use `canvas.width/height` assignment on each animation frame in `fit()`; avoid this resizing/performance overhead before going live (cache dimensions and resize on size/DPR changes).
+- The validation branch caches Canvas dimensions/DPR and stops animation frames while hidden/offscreen. Preserve these fixes; browser tests instrument dimension assignments and draw counts.
 - Look for proper animation pause on hidden/offscreen tabs and event cleanup.
 - If adding a base path (e.g. GitHub Pages project subpath), update Astro config and links; preferred production deployment is served at the domain root.
 
