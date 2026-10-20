@@ -29,13 +29,13 @@ import '../styles/global.css';
     <section class="pong-hero theme-surface" aria-label="可玩的乒乓球游戏">
       <div class="game-head"><span>01 / INTERACTIVE PLAYGROUND</span><span class="status-dot">● LIVE CANVAS</span></div>
       <div class="game-screen pong-screen" id="pong-stage">
-        <canvas id="pong-canvas" aria-label="Pong 球类游戏，按 W、S 键控制左侧挡板"></canvas>
+        <canvas tabindex="0" id="pong-canvas" aria-label="Pong 球类游戏，按 W、S 键控制左侧挡板"></canvas>
         <div class="game-overlay" id="pong-overlay">
           <span class="tiny-label">LET'S PLAY SOMETHING</span>
           <h2>BREAK THE<br />BORING.</h2>
           <p>你的作品集，不该只是静态展示。</p>
           <button id="pong-start" class="pill-button" type="button">START GAME <span>↗</span></button>
-          <span class="hint">W / S TO MOVE · TAP TO PAUSE</span>
+          <span class="hint">W / S · SPACE 暂停 · 触屏拖动</span>
         </div>
         <div class="game-counter"><span>PLAYER <b id="pong-score">00</b></span><span>CPU <b id="cpu-score">00</b></span></div>
       </div>
@@ -91,11 +91,11 @@ import '../styles/global.css';
         <div class="section-heading reveal"><h2>SKILLS YOU<br />CAN <em>PLAY.</em></h2><p>技能即砖块。A / D 移动挡板，击中砖块获得分数。</p></div>
         <div class="lab-grid">
           <div class="skills-cloud reveal"><span>TOOLBOX / PLACEHOLDERS</span><div class="skill-tags"><span>Unity</span><span>C#</span><span>TypeScript</span><span>Web</span><span>Gameplay</span><span>UI / UX</span><span>Tools</span><span>Architecture</span><span>Animation</span><span>Creative Code</span></div><div class="lab-note"><span>↳</span> The best way to explain an interaction is to make it playable.</div></div>
-          <div class="brick-shell reveal"><div class="brick-top"><span>BRICK BREAKER / 001</span><span id="brick-score">SCORE 000</span></div><div class="brick-area" id="brick-stage"><canvas id="brick-canvas" aria-label="打砖块游戏，按 A、D 键移动挡板"></canvas><div class="brick-overlay" id="brick-overlay"><span>MINI GAME</span><strong>READY?</strong><button id="brick-start" class="pill-button" type="button">START BREAKING ↗</button><small>A / D TO MOVE</small></div></div><div class="brick-bottom">PLAY. LEARN. REPEAT. <span id="brick-level">LEVEL 01</span></div></div>
+          <div class="brick-shell reveal"><div class="brick-top"><span>BRICK BREAKER / 001</span><span id="brick-score">SCORE 000</span></div><div class="brick-area" id="brick-stage"><canvas tabindex="0" id="brick-canvas" aria-label="打砖块游戏，按 A、D 键移动挡板"></canvas><div class="brick-overlay" id="brick-overlay"><span>MINI GAME</span><strong>READY?</strong><button id="brick-start" class="pill-button" type="button">START BREAKING ↗</button><small>A / D · SPACE 暂停 · 触屏拖动</small></div></div><div class="brick-bottom">PLAY. LEARN. REPEAT. <span id="brick-level">LEVEL 01</span></div></div>
         </div>
       </section>
 
-      <section class="contact-section section-wrap" id="contact"><div class="section-kicker reveal">06 / WHAT'S NEXT <span>—</span> LET'S CONNECT</div><div class="contact-inner reveal"><div><span class="eyebrow">HAVE SOMETHING INTERESTING?</span><h2>LET'S MAKE<br /><em>IT REAL.</em></h2></div><a href="mailto:hello@example.com" class="contact-link" aria-label="替换成自己的联系方式">SAY HELLO ↗</a></div></section>
+      <section class="contact-section section-wrap" id="contact"><div class="section-kicker reveal">06 / WHAT'S NEXT <span>—</span> LET'S CONNECT</div><div class="contact-inner reveal"><div><span class="eyebrow">HAVE SOMETHING INTERESTING?</span><h2>LET'S MAKE<br /><em>IT REAL.</em></h2></div><span class="contact-link" aria-label="演示占位，尚未配置联系方式">DEMO ONLY</span></div></section>
     </main>
     <footer><span>© 2026 PLAYGROUND / WIREFRAME V1</span><a href="#top">BACK TO TOP ↑</a><span>NO LIBRARIES WERE HARMED IN THESE ANIMATIONS.</span></footer>
   </div>

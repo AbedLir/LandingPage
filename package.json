@@ -7,15 +7,22 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "test:browser": "playwright test"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.8",
-    "tailwindcss": "^4.2.2",
-    "@tailwindcss/vite": "^4.2.2"
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
-    "typescript": "^5.9.3"
+    "@playwright/test": "^1.56.1",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

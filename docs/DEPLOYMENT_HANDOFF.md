@@ -2,6 +2,12 @@
 
 Last updated: 2026-10-20
 
+Validation update: `fix/interactive-validation` contains the build and interaction
+repairs, a committed npm lockfile and 9 passing Chromium tests. See
+[`VALIDATION_REPORT.md`](VALIDATION_REPORT.md) for current evidence and limits.
+The unvalidated implementation described below is the original feature baseline.
+Cloud deployment remains pending server details and SSH credentials.
+
 ## 1. Purpose / current status
 
 The user asked for a playable, huxx.me-inspired **white-model (白模)** for an interactive personal Landing Page. It should prioritize reproducible interactions and architecture rather than final illustrations, branding and content.
